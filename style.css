@@ -1,0 +1,10 @@
+.jumbotron{
+    background-color: #81a6be;
+    color: white;
+}
+input{
+    color: rgb(163, 163, 163);
+}
+input:focus{
+    color: black;
+}
