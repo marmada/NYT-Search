@@ -29,7 +29,7 @@ $(document).ready(function(){
                     if(numberSearches>10){
                         for(var i = 0; i < 10; i++){
                             var article = articles[i];
-                            $("#result").append("<h2>"+article.headline.main+"</h2>");
+                            $("#result").append("<h2 class='jumbotron'>"+article.headline.main+"</h2>");
                         }
                         $.ajax({
                             method: "GET",
@@ -38,13 +38,13 @@ $(document).ready(function(){
                             var articles = response.response.docs;
                             for(var j = 0; j < 5; j++){
                                var article = articles[j];
-                               $("#result").append("<h2>"+article.headline.main+"</h2>");
+                               $("#result").append("<h2  class='jumbotron'>"+article.headline.main+"</h2>");
                             }
                         });
                     }else{
                         for(var i = 0; i < numberSearches; i++){
                             var article = articles[i];
-                            $("#result").append("<h2>"+article.headline.main+"</h2>");
+                            $("#result").append("<h2  class='jumbotron'>"+article.headline.main+"</h2>");
                         }
                     }
                 }else{
@@ -52,7 +52,7 @@ $(document).ready(function(){
                     if(hits>10){
                         for(var i = 0; i < 10; i++){
                             var article = articles[i];
-                            $("#result").append("<h2>"+article.headline.main+"</h2>");
+                            $("#result").append("<h2  class='jumbotron'>"+article.headline.main+"</h2>");
                         }
                         $.ajax({
                             method: "GET",
@@ -61,13 +61,13 @@ $(document).ready(function(){
                             var articles = response.response.docs;
                             for(var j = 0; j < hits-10; j++){
                                 var article = articles[j];
-                                $("#result").append("<h2>"+article.headline.main+"</h2>");
+                                $("#result").append("<h2  class='jumbotron'>"+article.headline.main+"</h2>");
                             }
                         });
                     }else{
                         for(var i = 0; i < hits; i++){
                             var article = articles[i];
-                            $("#result").append("<h2>"+article.headline.main+"</h2>");
+                            $("#result").append("<h2  class='jumbotron'>"+article.headline.main+"</h2>");
                         }
                     }
                 }
